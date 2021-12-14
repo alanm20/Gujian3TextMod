@@ -43,4 +43,4 @@ applications, and to alter it and redistribute it freely, subject to the followi
    3. This notice may not be removed or altered from any source distribution.
 
 Code in this project is taken from:
-Elisha Riedlinger [DirectX-Wrappers](https://github.com/elishacloud/DirectX-Wrappers)
+- Elisha Riedlinger [DirectX-Wrappers](https://github.com/elishacloud/DirectX-Wrappers)
