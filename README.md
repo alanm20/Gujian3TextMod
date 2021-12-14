@@ -2,6 +2,7 @@
 A Stub DLL replace in-game text messages.
 
 Original DirectSound wrapper DLL implementation from [DirectX-Wrappers](https://github.com/elishacloud/DirectX-Wrappers)
+
 The code was modified to work only as text mod for Gujian3.exe.
 
 ## Building the app
