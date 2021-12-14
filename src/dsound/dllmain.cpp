@@ -84,7 +84,7 @@ WORD setChecksum(BYTE* a1, WORD* masks)
 	return v4;
 }
 
-// inject decrypt intercept code
+// inject decrypter intercept code
 int hook(LPVOID function_address, LPVOID redirect_address) {
 	int ProtectionNeeded = 0;
 
@@ -163,7 +163,7 @@ GameInfo GameVerInfo[] = {
 	{0x12b4f5, 0x1364f10, 0x0494818D, file_1_3}
 };
 
-//  insert asm code to virtal address, install interception code
+//  insert asm code to virtual address, install interception code
 int addCode(LPVOID dest_address, unsigned char* codeBytes, int length) {
 	int bChanged = 0;
 
@@ -337,14 +337,14 @@ void SetupHook()
 				patchBufferSize(encryptedBufferAddr, words, (DWORD)new_size);     // change original encrpyted buffer size and checksum 
 
 				bindAddr = (BYTE*) baseAddr + pBindSection->VirtualAddress;  // virtual address of .bind section
-				funcAddr = (BYTE*) baseAddr + GameVerInfo[GameIndex].decryptFuncEntry; // virtual addr of decryptor
+				funcAddr = (BYTE*) baseAddr + GameVerInfo[GameIndex].decryptFuncEntry; // virtual addr of decrypter
 				redirectAddr = bindAddr + 8;  // DLL stub starting point
-				// install  decrytor hook
+				// install  decryter hook
 				if (*((DWORD*)funcAddr) == 0x55415755)  // make sure  decrptor function instructions is found
 				{
 					*((DWORD**)&(DLLStub[0])) = (DWORD *) DLLcallback;   // set addr of  callback that read text.bin file  
 					*((DWORD*)&(DLLStub[11])) = new_size;     //tell stub code the new text buffer size
-					*((DWORD*)&(DLLStub[25])) = ((BYTE*)funcAddr + 6 - ((BYTE*) bindAddr + 29)); // calculate relative offset for jmp back to descrptor
+					*((DWORD*)&(DLLStub[25])) = ((BYTE*)funcAddr + 6 - ((BYTE*) bindAddr + 29)); // calculate relative offset for jmp back to descrpter
 
 					hook(funcAddr, redirectAddr);     //install hook
 					codeSize = sizeof(DLLStub);
