@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{457D22C0-E3D3-4BF7-BD01-144A085C7B75}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>dsound</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <ModuleDefinitionFile>dsound.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <ModuleDefinitionFile>dsound.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="IDirectSound3DBuffer8.cpp" />
+    <ClCompile Include="IDirectSound3DListener8.cpp" />
+    <ClCompile Include="IDirectSoundBuffer8.cpp" />
+    <ClCompile Include="IDirectSound8.cpp" />
+    <ClCompile Include="IDirectSoundCapture8.cpp" />
+    <ClCompile Include="IDirectSoundCaptureBuffer8.cpp" />
+    <ClCompile Include="IDirectSoundCaptureFXAec8.cpp" />
+    <ClCompile Include="IDirectSoundCaptureFXNoiseSuppress8.cpp" />
+    <ClCompile Include="IDirectSoundFullDuplex8.cpp" />
+    <ClCompile Include="IDirectSoundFXChorus8.cpp" />
+    <ClCompile Include="IDirectSoundFXCompressor8.cpp" />
+    <ClCompile Include="IDirectSoundFXDistortion8.cpp" />
+    <ClCompile Include="IDirectSoundFXEcho8.cpp" />
+    <ClCompile Include="IDirectSoundFXFlanger8.cpp" />
+    <ClCompile Include="IDirectSoundFXGargle8.cpp" />
+    <ClCompile Include="IDirectSoundFXI3DL2Reverb8.cpp" />
+    <ClCompile Include="IDirectSoundFXParamEq8.cpp" />
+    <ClCompile Include="IDirectSoundFXWavesReverb8.cpp" />
+    <ClCompile Include="IDirectSoundNotify8.cpp" />
+    <ClCompile Include="IKsPropertySet.cpp" />
+    <ClCompile Include="InterfaceQuery.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="dsound.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AddressLookupTable.h" />
+    <ClInclude Include="dsound.h" />
+    <ClInclude Include="IDirectSound3DBuffer8.h" />
+    <ClInclude Include="IDirectSound3DListener8.h" />
+    <ClInclude Include="IDirectSoundBuffer8.h" />
+    <ClInclude Include="IDirectSound8.h" />
+    <ClInclude Include="IDirectSoundCapture8.h" />
+    <ClInclude Include="IDirectSoundCaptureBuffer8.h" />
+    <ClInclude Include="IDirectSoundCaptureFXAec8.h" />
+    <ClInclude Include="IDirectSoundCaptureFXNoiseSuppress8.h" />
+    <ClInclude Include="IDirectSoundFullDuplex8.h" />
+    <ClInclude Include="IDirectSoundFXChorus8.h" />
+    <ClInclude Include="IDirectSoundFXCompressor8.h" />
+    <ClInclude Include="IDirectSoundFXDistortion8.h" />
+    <ClInclude Include="IDirectSoundFXEcho8.h" />
+    <ClInclude Include="IDirectSoundFXFlanger8.h" />
+    <ClInclude Include="IDirectSoundFXGargle8.h" />
+    <ClInclude Include="IDirectSoundFXI3DL2Reverb8.h" />
+    <ClInclude Include="IDirectSoundFXParamEq8.h" />
+    <ClInclude Include="IDirectSoundFXWavesReverb8.h" />
+    <ClInclude Include="IDirectSoundNotify8.h" />
+    <ClInclude Include="IKsPropertySet.h" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="dsound.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
