@@ -344,7 +344,7 @@ void SetupHook()
 				{
 					*((DWORD**)&(DLLStub[0])) = (DWORD *) DLLcallback;   // set addr of  callback that read text.bin file  
 					*((DWORD*)&(DLLStub[11])) = new_size;     //tell stub code the new text buffer size
-					*((DWORD*)&(DLLStub[25])) = ((BYTE*)funcAddr + 6 - ((BYTE*) bindAddr + 29)); // calculate relative offset for jmp back to descrpter
+					*((DWORD*)&(DLLStub[25])) = ((BYTE*)funcAddr + 6 - ((BYTE*) bindAddr + 29)); // calculate relative offset for jmp back to descrypter
 
 					hook(funcAddr, redirectAddr);     //install hook
 					codeSize = sizeof(DLLStub);
