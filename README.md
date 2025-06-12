@@ -14,7 +14,6 @@ A Stub DLL replace in-game text messages.
 ## Installation
 - Copy dsound.dll  to Steam game directory bin64/ folder next to Gujian3.exe
 - Copy text.bin if you have game version 1.2 or text1302142.bin for version 1.3 to  bin64 folder.
-/2
 - Use https://github.com/Kaplas80/GuJian3Manager to export text.bin (text1302142.bin for v1.3) to JSON format and import localized JSON file back to text.bin
 
 ## Uninstall
